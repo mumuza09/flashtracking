@@ -115,7 +115,7 @@
         "type": "function",
         "z": "3bc200a7.a2eba",
         "name": "",
-        "func": "if(msg.payload.code == 1 && msg.payload.message.list.length > 0)\n{\n    var tracks = \"\";\n    for(i=0;i<msg.payload.message.list[0].routes.length;i++)\n    {\n        tracks = tracks +\"<tr><td>\"+ msg.payload.message.list[0].routes[i].message + \"</td>\"\n        tracks = tracks +\"<td>\"+ msg.payload.message.list[0].routes[i].routed_at + \"</td></tr>\" \n    }\n    msg.payload = {\n        trackNo : msg.payload.message.list[0].pno,\n        mainStats : msg.payload.message.list[0].state_text,\n        subTrack : tracks\n    }\n}else\n{\n    msg.payload = {\n        trackNo : \"ไม่พบข้อมูลพัสดุ โปรดตรวจสอบว่าป้อนเลขถูกต้องหรือไม่\"\n    }\n}\n\n\nreturn msg;",
+        "func": "if(msg.payload.code == 1 && msg.payload.message.list.length > 0)\n{\n    var tracks = \"\";\n    for(i=0;i<msg.payload.message.list[0].routes.length;i++)\n    {\n        tracks = tracks +\"<tr><td>\"+ (msg.payload.message.list[0].routes.length-i) +\".\"+msg.payload.message.list[0].routes[i].message + \"</td>\"\n        tracks = tracks +\"<td>\"+ msg.payload.message.list[0].routes[i].routed_at + \"</td></tr>\" \n    }\n    msg.payload = {\n        trackNo : msg.payload.message.list[0].pno,\n        mainStats : msg.payload.message.list[0].state_text,\n        subTrack : tracks\n    }\n}else\n{\n    msg.payload = {\n        trackNo : \"ไม่พบข้อมูลพัสดุ โปรดตรวจสอบว่าป้อนเลขถูกต้องหรือไม่\"\n    }\n}\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
