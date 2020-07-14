@@ -1,0 +1,26 @@
+{
+  "name": "flashtracking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/node-red/red.js -s data/settings.js -u data flows.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mumuza09/flashtracking.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mumuza09/flashtracking/issues"
+  },
+  "homepage": "https://github.com/mumuza09/flashtracking#readme",
+  "dependencies": {
+    "geo-distance": "^0.2.0",
+    "node-red": "^1.1.2",
+    "readline-sync": "^1.4.10",
+    "request-promise": "^4.2.5"
+  }
+}
