@@ -19,7 +19,7 @@
   "homepage": "https://github.com/mumuza09/flashtracking#readme",
   "dependencies": {
     "geo-distance": "^0.2.0",
-    "node-red": "^1.1.2",
+    "node-red": "^3.0.2",
     "readline-sync": "^1.4.10",
     "request-promise": "^4.2.5"
   }
